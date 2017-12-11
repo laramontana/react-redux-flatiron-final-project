@@ -5,7 +5,7 @@ class Question extends Component {
   render() {
     return (
       <div>
-        Question page
+        {this.props.question.q}
       </div>
     )
   }

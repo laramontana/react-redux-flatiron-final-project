@@ -1,7 +1,7 @@
-export default (state = {}, action) => {
+export default (state = {q: "test question", a: "answer"}, action) => {
   switch (action.type) {
     case 'SHOW_Q':
-      return {}
+      return state
     default:
       return state;
   }
