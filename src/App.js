@@ -6,6 +6,12 @@ import Question from './containers/question';
 import './App.css';
 
 class App extends Component {
+
+  componentDidMount() {
+      console.log('in component did mount')
+      this.props.fetchQuestion()
+  }
+
   render() {
     return (
       <div className="App">
