@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import logo from './logo2.png';
+import { fetchQuestion } from './actions/questionsActions';
 import Question from './containers/question';
 import './App.css';
 
@@ -24,4 +25,4 @@ const mapStateToProps = (state) => {
   return {question: state.question}
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, {fetchQuestion})(App);
