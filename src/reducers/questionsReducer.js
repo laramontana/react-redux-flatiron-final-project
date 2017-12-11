@@ -1,7 +1,7 @@
 export default (state = {}, action) => {
   switch (action.type) {
     case 'SHOW_Q':
-      return {???}
+      return {}
     default:
       return state;
   }
