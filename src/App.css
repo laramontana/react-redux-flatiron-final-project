@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Vollkorn+SC');
+
 .App {
   text-align: center;
 }
@@ -16,10 +18,12 @@
 
 .App-title {
   font-size: 2em;
+  font-family: 'Vollkorn SC', serif;
 }
 
 .App-intro {
-  font-size: large;
+  font-size: 2.5em;
+  font-family: 'Amatic SC', cursive;
   width: 70%;
   margin: auto;
   padding: 20px;
