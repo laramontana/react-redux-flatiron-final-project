@@ -8,13 +8,26 @@ import './App.css';
 
 class App extends Component {
 
+  constructor() {
+    super();
+    this.state = {
+      answerClicked: false
+    };
+  }
+
+  handleClick = event => {
+    this.setState({
+      answerClicked: true
+    })
+  }
+
   componentDidMount() {
-      console.log('in component did mount')
       this.props.fetchQuestion()
   }
 
   render() {
     const {question} = this.props
+    let answer = this.state.answerClicked ? <Answer question={question}/> : null;
     return (
       <div className="App">
         <header className="App-header">
@@ -23,7 +36,8 @@ class App extends Component {
         </header>
         <div className="App-intro">
           <Question question={question}/>
-          <Answer question={question}/>
+          <button onClick={this.handleClick} type="button" className="btn btn-outline-warning">Answer</button>
+          {answer}
         </div>
       </div>
     );
