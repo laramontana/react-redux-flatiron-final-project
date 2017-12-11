@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import logo from './logo2.png';
 import { fetchQuestion } from './actions/questionsActions';
 import Question from './components/question';
+import Answer from './components/answer';
 import './App.css';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
   }
 
   render() {
+    const {question} = this.props
     return (
       <div className="App">
         <header className="App-header">
@@ -20,7 +22,8 @@ class App extends Component {
           <h1 className="App-title">Trivia App</h1>
         </header>
         <div className="App-intro">
-          <Question question={this.props.question}/>
+          <Question question={question}/>
+          <Answer question={question}/>
         </div>
       </div>
     );
