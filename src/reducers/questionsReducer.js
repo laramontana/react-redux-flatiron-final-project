@@ -1,7 +1,7 @@
-export default (state = {q: "test question", a: "answer"}, action) => {
+export default (state = {q: "", a: ""}, action) => {
   switch (action.type) {
-    case 'SHOW_Q':
-      return state
+    case 'FETCH_QUESTION':
+      return action.payload
     default:
       return state;
   }
