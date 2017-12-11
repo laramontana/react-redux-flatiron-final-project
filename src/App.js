@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import logo from './logo2.png';
 import { fetchQuestion } from './actions/questionsActions';
-import Question from './containers/question';
+import Question from './components/question';
 import './App.css';
 
 class App extends Component {
