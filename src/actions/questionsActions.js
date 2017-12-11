@@ -7,7 +7,7 @@ export function fetchQuestion() {
       .then(res => {
         return res.json()
       }).then(responseJson => {
-        dispatch({type: 'FETCH_QUESTION', payload: {q: responseJson.question, a: responseJson.question}})
+        dispatch({type: 'FETCH_QUESTION', payload: {q: responseJson[0].question, a: responseJson[0].answer}})
     })
   }
 }
