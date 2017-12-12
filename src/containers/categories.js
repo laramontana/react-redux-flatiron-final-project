@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchCategories } from '../actions/categoriesActions';
+import { Route, Switch } from 'react-router-dom';
 import CategoriesList from '../components/categoriesList';
+import Category from './category';
 import '../App.css';
 
 class Categories extends Component {
@@ -22,6 +24,9 @@ class Categories extends Component {
       <div className="App">
       <h4 className="App-title">Choose a category</h4>
       <CategoriesList categories={this.props.categories}/>
+      <Switch>
+          <Route path={`${this.props.match.url}/:categoryId`} component={Category}/>
+      </Switch>
       </div>
     );
   }

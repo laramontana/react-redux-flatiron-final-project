@@ -52,10 +52,20 @@ button {
   font-size: 16px;
 }
 
-button.cat {
+a.cat {
   width: 23%;
+  display: inline-block;
   background-color: none;
   float: center;
+  margin: 5px;
+  color: black;
+  border: solid black;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
 }
 
 button.answer {

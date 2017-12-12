@@ -6,8 +6,8 @@ export function fetchCategories() {
     return fetch('http://www.jservice.io/api/categories?count=48')
       .then(res => {
         return res.json()
-      }).then(responseJson => {
-        dispatch({type: 'FETCH_CATEGORIES', payload: responseJson})
+      }).then(categories => {
+        dispatch({type: 'FETCH_CATEGORIES', payload: categories})
     })
   }
 }
