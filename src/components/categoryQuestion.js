@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../App.css';
+import Question from './question';
+import Answer from './answer';
 
-const CategoryQuestion = ({question, answer}) =>
-    <div>
-      <p><b>{question}</b></p>
-      <p><i>{answer}</i></p>
-    </div>
+
+class CategoryQuestion extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      answerClicked: false
+    };
+  }
+
+  render() {
+    const {question, answer} = this.props
+    let showAnswer = this.state.answerClicked ? <Answer answer={answer}/> : null;
+
+    return (
+      <div>
+        <Question question={question}/>
+        <button onClick={this.handleClick} type="button" className="answer">Answer</button>
+        {showAnswer}
+      </div>
+    );
+  }
+}
 
 export default CategoryQuestion;
