@@ -23,7 +23,7 @@ class Categories extends Component {
     return (
       <div className="App">
         <h4 className="App-title">Choose a category</h4>
-        <CategoriesList categories={this.props.categories}/>
+        <Route exact path={`${this.props.match.url}`} component={CategoriesList}/>
         <Route path={`${this.props.match.url}/:categoryId`} component={Category}/>
       </div>
     );
