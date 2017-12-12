@@ -5,9 +5,11 @@ import '../App.css';
 
 class Category extends Component {
 
-  render() {
-    console.log(this.props.category.title)
+  componentDidMount() {
+    this.props.fetchCategoryQuestions(this.props.category.id)
+  }
 
+  render() {
     return (
       <div className="App">
         <h1>{this.props.category.title}</h1>
@@ -16,7 +18,6 @@ class Category extends Component {
   }
 }
 
-
 const mapStateToProps = (state, ownProps) => {
   const category = state.categories.find(category=>category.id == ownProps.match.params.categoryId)
   return {
@@ -24,5 +25,4 @@ const mapStateToProps = (state, ownProps) => {
   };
 }
 
-
-export default connect(mapStateToProps)(Category);
+export default connect(mapStateToProps, {fetchCategoryQuestions})(Category);
