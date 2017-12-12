@@ -11,6 +11,10 @@ class Categories extends Component {
     };
   }
 
+  componentDidMount() {
+    this.props.fetchCategories()
+  }
+
 
   render() {
 

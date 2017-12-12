@@ -7,7 +7,7 @@ export function fetchCategories() {
       .then(res => {
         return res.json()
       }).then(responseJson => {
-        dispatch({type: 'FETCH_CATEGORIES', payload: {}})
+        dispatch({type: 'FETCH_CATEGORIES', payload: responseJson})
     })
   }
 }
