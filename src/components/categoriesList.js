@@ -14,6 +14,7 @@ class CategoriesList extends Component {
 
     return (
       <div>
+      <h4 className="App-title">Choose a category</h4>
         {this.props.categories.map(category=><Link className="cat" key={category.id} to={`/categories/${category.id}`}>{category.title.charAt(0).toUpperCase() + category.title.slice(1)}</Link>)}
       </div>
     );
