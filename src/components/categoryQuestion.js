@@ -13,6 +13,12 @@ class CategoryQuestion extends Component {
     };
   }
 
+  handleClick = event => {
+    this.setState({
+      answerClicked: true
+    })
+  }
+
   render() {
     const {question, answer} = this.props
     let showAnswer = this.state.answerClicked ? <Answer answer={answer}/> : null;
