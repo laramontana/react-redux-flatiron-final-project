@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { fetchCategory } from '../actions/categoriesActions';
 import '../App.css';
 
 class Category extends Component {
@@ -24,4 +25,9 @@ class Category extends Component {
   }
 }
 
-export default Category;
+
+const mapStateToProps = (state) => {
+  return {category: state.category}
+}
+
+export default connect(mapStateToProps, {fetchCategory})(Category);
