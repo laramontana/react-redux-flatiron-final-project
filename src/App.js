@@ -6,6 +6,7 @@ import {
 import logo from './logo2.png';
 import NavBar from './components/NavBar';
 import Quiz from './containers/quiz';
+import About from './components/about';
 import './App.css';
 
 class App extends Component {
@@ -21,7 +22,8 @@ class App extends Component {
         <Router>
           <div>
             <NavBar/>
-            <Quiz/>
+            <Route exact path="/" component={Quiz} />
+            <Route path="/about" component={About} />
           </div>
         </Router>
       </div>
