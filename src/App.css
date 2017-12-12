@@ -43,16 +43,28 @@ p {
   line-height: 180%;
 }
 
-button.cat {
-  display: block;
+button {
   margin: 4px auto;
-  width: 27%;
-  background-color: none;
   color: black;
   border: solid black;
   padding: 15px 32px;
   text-align: center;
   font-size: 16px;
+}
+
+button.cat {
+  display: block;
+  width: 27%;
+  background-color: none;
+}
+
+button.answer {
+  width: 15%;
+  background-color: #FFFF2D;
+}
+button.next {
+  width: 18%;
+  background-color: blue;
 }
 
 @keyframes App-logo-spin {

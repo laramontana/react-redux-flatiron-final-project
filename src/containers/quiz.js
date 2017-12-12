@@ -34,13 +34,13 @@ class Quiz extends Component {
   render() {
     const {question} = this.props
     let answer = this.state.answerClicked ? <Answer question={question}/> : null;
-    let next = this.state.answerClicked ? <button onClick={this.handleClickNext} type="button" className="btn btn-outline-warning">Next Question</button> : null;
+    let next = this.state.answerClicked ? <button onClick={this.handleClickNext} type="button" className="next">Next Question</button> : null;
 
     return (
       <div className="App">
         <div className="App-intro">
           <Question question={question}/>
-          <button onClick={this.handleClick} type="button" className="btn btn-outline-warning">Answer</button>
+          <button onClick={this.handleClick} type="button" className="answer">Answer</button>
           {next}
           {answer}
         </div>
