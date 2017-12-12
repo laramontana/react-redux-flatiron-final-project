@@ -44,7 +44,7 @@ p {
 }
 
 button {
-  margin: 4px auto;
+  margin: 5px;
   color: black;
   border: solid black;
   padding: 15px 32px;
@@ -53,9 +53,9 @@ button {
 }
 
 button.cat {
-  display: block;
-  width: 27%;
+  width: 23%;
   background-color: none;
+  float: center;
 }
 
 button.answer {
