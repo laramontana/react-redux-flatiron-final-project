@@ -1,9 +1,10 @@
 import React from 'react';
+import '../App.css';
 
 const CategoryQuestion = ({question, answer}) =>
     <div>
-      <h2>{question}</h2>
-      <h3>{answer}</h3>
+      <p><b>{question}</b></p>
+      <p><i>{answer}</i></p>
     </div>
 
 export default CategoryQuestion;
