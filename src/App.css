@@ -43,6 +43,11 @@ p {
   line-height: 180%;
 }
 
+button.cat {
+  display: block;
+  margin: auto;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
