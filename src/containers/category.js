@@ -12,7 +12,7 @@ class Category extends Component {
   render() {
     return (
       <div className="App">
-        <h1>{this.props.category.title}</h1>
+        <h1>Category questions</h1>
       </div>
     );
   }
