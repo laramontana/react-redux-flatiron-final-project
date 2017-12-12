@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchCategoryQuestions } from '../actions/categoriesActions';
 import CategoryQuestion from '../containers/categoryQuestion';
+import Score from '../containers/score';
+
 import '../App.css';
 
 class Category extends Component {
@@ -15,6 +17,7 @@ class Category extends Component {
     return (
       <div className="App">
         <h4 className="App-title">{category.title}</h4>
+        <Score />
         {questions.map(question=><CategoryQuestion key={question.id} question={question.question} answer={question.answer}/>)}
       </div>
     );
