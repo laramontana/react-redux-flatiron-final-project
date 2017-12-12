@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
-import Question from './question';
-import Answer from './answer';
+import Question from '../components/question';
+import Answer from '../components/answer';
 
 
 class CategoryQuestion extends Component {

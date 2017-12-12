@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import CategoriesList from '../components/categoriesList';
+import CategoriesList from './categoriesList';
 import Category from './category';
 import '../App.css';
 

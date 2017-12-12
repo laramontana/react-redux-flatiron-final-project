@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchCategoryQuestions } from '../actions/categoriesActions';
-import CategoryQuestion from '../components/categoryQuestion';
+import CategoryQuestion from '../containers/categoryQuestion';
 import '../App.css';
 
 class Category extends Component {

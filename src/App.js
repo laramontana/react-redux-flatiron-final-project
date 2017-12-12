@@ -6,7 +6,7 @@ import {
 import logo from './logo2.png';
 import NavBar from './components/NavBar';
 import Quiz from './containers/quiz';
-import Categories from './containers/categories';
+import Categories from './components/categories';
 import About from './components/about';
 import './App.css';
 
